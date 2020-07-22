@@ -1,8 +1,16 @@
 """
-Gets list of visual cortex neurons, 
-then plots heatmap of average response for each, average response of all, and average response for each on same axes
+Written by @conorkeogh (Conor Keogh)
+
+This step helps with the visualisation of a brain area.
+The code at present is set up to visualise the visual cortex which is useful in this task, on account of the visual 
+component of the task.
+Order of operations:
+1. Create list of visual cortex neurons, 
+2. Plots heatmap of average response for each, average response of all, and average response for each on same axes
 """
-dat = dict
+import matplotlib.pyplot as plt
+
+dat = {} # Load from Steinmetz data
 # Get list of visual cortex neurons
 visual_cortex_neurons = []
 i = 0
