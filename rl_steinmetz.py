@@ -1,5 +1,5 @@
 """
-This script was written @hWils (Holly Wilson)
+This script was written by @hWils (Holly Wilson)
 This RL algorithm determines whether the mouse behaviour can be modelled using reinforcement learning.
 In this specific case q-learning has been implemented and the conditions are treated as discrete. 
 Having run the model, it computes the similarity between the RL model's choices and the mouse's actual choices
