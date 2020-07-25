@@ -1,5 +1,5 @@
 """
-Written by @conorkeogh (Conor Keogh)
+Written by [Conor Keogh](https://github.com/conorkeogh)
 
 This step helps with the visualisation of a brain area.
 The code at present is set up to visualise the visual cortex which is useful in this task, on account of the visual 
