@@ -7,6 +7,7 @@ Team members:
 [Siobhan Hall](https://github.com/SMHall94)
 
 ### Overview of task:
+---
 Animals update their behavioural strategies based on feedback to their decisions. Decoding strategies have demonstrated neural activity related to decision making. Similarly, feedback-related responses are well-established in EEG. Frameworks such as “predictive coding”, supported by evidence from sensory perception, have been proposed to unify prediction and feedback where an internal “model” of the external world is updated based on error. It remains unclear, however, how this feedback-related activity is integrated with predictive activity.
 
 Demonstrating a relationship between predictive activity and reward activity on the previous trial (or previous n trials with some weighting) would show that the brain “integrates” reward information to inform decision making. This would imply that some internal state is updated, providing electrophysiological support for models of decision making based on internal predictions. More specifically, we expect to find that the magnitude of neural responses vary as a function of correct vs. incorrect trials as a reflection of the error signal. We will consider a combination of regions of interest deemed to be relevant in past literature as well as novel brain regions, to investigate differential encoding of feedback through different functional areas.
@@ -14,12 +15,15 @@ Demonstrating a relationship between predictive activity and reward activity on 
 **Dataset** (reference paper): [Steinmetz](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6913580/) 
 
 ## Aim 
+---
 Determine whether feedback integration from a task (performed correctly with a reward, versus incorrectly with an auditory punishment) is evident in the subsequent task
 
 ## Hypothesis
+---
 Feedback integration from a task is used to update predictions in the subsequent trials (single trial history)
 
 ## Objectives
+---
 The methodology is further expanded within the code available at the following links:
 - [Load data](https://github.com/SMHall94/backtothefuture/blob/master/load_data.py) 
 - [Data exploration](https://github.com/SMHall94/backtothefuture/blob/master/visual_cortex_visualisation.py): Visualisation of the data
@@ -28,13 +32,14 @@ The methodology is further expanded within the code available at the following l
 - [Granger causality](https://github.com/SMHall94/backtothefuture/blob/master/pairwise_granger_causality.py) to compare reward[t] to response[t+1] where 't' corresponds to a relative trial 
 
 ## Results and discussion
+---
 ### Best ten areas for decoding reward and response respectively (ranked by percentage accuracy)
 **Reward:** 'MEA' (cortical subplate), 'CA' (hippocampus), 'PT' (thalamus), 'MOp' (motor cortex), 'PAG' (midbrain), 'RT' (thalamus), 'COA' (motor cortex), 'BMA' (cortical subplate), 'CA2' (hippocampus), 'LSr' (basal ganglia)
 
 **Response:** 'VISrl' (visual) , 'MG' (thalamus), 'NB' (midbrain) , 'CA2', (hippocampus) 'SPF' (thalamus), 'PIR' (motor cortex), 'CA' (hippocampus), 'EPd'(cortical subplate), 'POL'(thalamus), ' TT' (motor cortex)
 
 
-### Best time windows for decoding reward and response within the respective brain areas
+#### Best time windows for decoding reward and response within the respective brain areas
 **Reward:** 0.0 to 1.1 (timelocked to reward at time 0.0)
 
 **Response:** -0.8 to 0.0 (timelocked to the response at 0.0)
@@ -43,3 +48,4 @@ The methodology is further expanded within the code available at the following l
 The following links directly to the the 'CA' brain areas within the hippocampus - chosen as it is the area with the highest decoding accuracy for both response and reward
 
 ## Conclusion
+---
