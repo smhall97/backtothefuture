@@ -17,13 +17,16 @@ Demonstrating a relationship between predictive activity and reward activity on 
 Determine whether feedback integration from a task (performed correctly with a reward, versus incorrectly with an auditory punishment) is evident in the subsequent task
 
 ## Hypothesis
+Feedback integration from a task is used to update predictions in the subsequent trials (single trial history)
 
-
-## Objectives and methodology 
+## Objectives
+- [Load data](https://github.com/SMHall94/backtothefuture/blob/master/load_data.py) 
 - [Data exploration](https://github.com/SMHall94/backtothefuture/blob/master/visual_cortex_visualisation.py): Visualisation of the data
 - [Decode feedback and prediction information](https://github.com/SMHall94/backtothefuture/blob/master/logistic_regression.py)
-- [Determine optimal window]() for decoding
-- Autoregression
+- [Determine optimal window](https://github.com/SMHall94/backtothefuture/blob/master/optimal_window.py) for decoding
+- [Granger causality](https://github.com/SMHall94/backtothefuture/blob/master/pairwise_granger_causality.py)
+
+## Methodology and result summary
 
 ## Results and discussion
 
