@@ -34,15 +34,15 @@ The methodology is further expanded within the code available at the following l
 ---
 ## Results and discussion
 #### Top ten areas for decoding reward and response respectively (ranked by percentage accuracy)
-**Reward:** 'MEA' (cortical subplate), 'CA' (hippocampus), 'PT' (thalamus), 'MOp' (motor cortex), 'PAG' (midbrain), 'RT' (thalamus), 'COA' (motor cortex), 'BMA' (cortical subplate), 'CA2' (hippocampus), 'LSr' (basal ganglia)
+_Reward:_ 'MEA' (cortical subplate), 'CA' (hippocampus), 'PT' (thalamus), 'MOp' (motor cortex), 'PAG' (midbrain), 'RT' (thalamus), 'COA' (motor cortex), 'BMA' (cortical subplate), 'CA2' (hippocampus), 'LSr' (basal ganglia)
 
-**Response:** 'VISrl' (visual) , 'MG' (thalamus), 'NB' (midbrain) , 'CA2', (hippocampus) 'SPF' (thalamus), 'PIR' (motor cortex), 'CA' (hippocampus), 'EPd'(cortical subplate), 'POL'(thalamus), ' TT' (motor cortex)
+_Response:_ 'VISrl' (visual) , 'MG' (thalamus), 'NB' (midbrain) , 'CA2', (hippocampus) 'SPF' (thalamus), 'PIR' (motor cortex), 'CA' (hippocampus), 'EPd'(cortical subplate), 'POL'(thalamus), ' TT' (motor cortex)
 
 
 #### Best time windows for decoding reward and response within the respective brain areas
-**Reward:** 0.0 to 1.1 (timelocked to reward at time 0.0)
+_Reward:_ 0.0 to 1.1 (timelocked to reward at time 0.0)
 
-**Response:** -0.8 to 0.0 (timelocked to the response at 0.0)
+_Response:_ -0.8 to 0.0 (timelocked to the response at 0.0)
 
 ### Granger causality
 The following links directly to the the 'CA' brain areas within the hippocampus - chosen as it is the area with the highest decoding accuracy for both response and reward.
