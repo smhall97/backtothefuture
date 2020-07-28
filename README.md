@@ -20,14 +20,26 @@ Determine whether feedback integration from a task (performed correctly with a r
 Feedback integration from a task is used to update predictions in the subsequent trials (single trial history)
 
 ## Objectives
+The methodology is further expanded within the code available at the following links:
 - [Load data](https://github.com/SMHall94/backtothefuture/blob/master/load_data.py) 
 - [Data exploration](https://github.com/SMHall94/backtothefuture/blob/master/visual_cortex_visualisation.py): Visualisation of the data
 - [Decode feedback and prediction information](https://github.com/SMHall94/backtothefuture/blob/master/logistic_regression.py)
 - [Determine optimal window](https://github.com/SMHall94/backtothefuture/blob/master/optimal_window.py) for decoding
-- [Granger causality](https://github.com/SMHall94/backtothefuture/blob/master/pairwise_granger_causality.py)
-
-## Methodology and result summary
+- [Granger causality](https://github.com/SMHall94/backtothefuture/blob/master/pairwise_granger_causality.py) to compare reward[t] to response[t+1] where 't' corresponds to a relative trial 
 
 ## Results and discussion
+### Best ten areas for decoding reward and response respectively (ranked by percentage accuracy)
+**Reward:** 'MEA' (cortical subplate), 'CA' (hippocampus), 'PT' (thalamus), 'MOp' (motor cortex), 'PAG' (midbrain), 'RT' (thalamus), 'COA' (motor cortex), 'BMA' (cortical subplate), 'CA2' (hippocampus), 'LSr' (basal ganglia)
+
+**Response:** 'VISrl' (visual) , 'MG' (thalamus), 'NB' (midbrain) , 'CA2', (hippocampus) 'SPF' (thalamus), 'PIR' (motor cortex), 'CA' (hippocampus), 'EPd'(cortical subplate), 'POL'(thalamus), ' TT' (motor cortex)
+
+
+### Best time windows for decoding reward and response within the respective brain areas
+**Reward:** 0.0 to 1.1 (timelocked to reward at time 0.0)
+
+**Response:** -0.8 to 0.0 (timelocked to the response at 0.0)
+
+### Granger causality
+The following links directly to the the 'CA' brain areas within the hippocampus - chosen as it is the area with the highest decoding accuracy for both response and reward
 
 ## Conclusion
