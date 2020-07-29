@@ -39,6 +39,7 @@ _Reward:_ 'MEA' (cortical subplate), 'CA' (hippocampus), 'PT' (thalamus), 'MOp' 
 
 
 _Response:_ 'VISrl' (visual) , 'MG' (thalamus), 'NB' (midbrain) , 'CA2', (hippocampus) 'SPF' (thalamus), 'PIR' (motor cortex), 'CA' (hippocampus), 'EPd'(cortical subplate), 'POL'(thalamus), ' TT' (motor cortex)
+
 ![brainresponsedecodable](https://user-images.githubusercontent.com/47060850/88846193-2e1f4400-d1dd-11ea-89cd-45f2ef345e97.png)
 
 
