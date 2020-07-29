@@ -35,6 +35,8 @@ The methodology is further expanded within the code available at the following l
 ## Results
 #### Top ten areas for decoding reward and response respectively (ranked by percentage accuracy)
 _Reward:_ 'MEA' (cortical subplate), 'CA' (hippocampus), 'PT' (thalamus), 'MOp' (motor cortex), 'PAG' (midbrain), 'RT' (thalamus), 'COA' (motor cortex), 'BMA' (cortical subplate), 'CA2' (hippocampus), 'LSr' (basal ganglia)
+![brainrewarddecodable](https://user-images.githubusercontent.com/47060850/88845722-7ab64f80-d1dc-11ea-83af-b27d4d9d5bdf.png)
+
 
 _Response:_ 'VISrl' (visual) , 'MG' (thalamus), 'NB' (midbrain) , 'CA2', (hippocampus) 'SPF' (thalamus), 'PIR' (motor cortex), 'CA' (hippocampus), 'EPd'(cortical subplate), 'POL'(thalamus), ' TT' (motor cortex)
 
