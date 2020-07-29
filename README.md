@@ -44,9 +44,12 @@ _Reward:_ 0.0 to 1.1 (timelocked to reward at time 0.0)
 
 _Response:_ -0.8 to 0.0 (timelocked to the response at 0.0)
 
-### Granger causality
+#### Granger causality
 The following links directly to the the 'CA' brain areas within the hippocampus - chosen as it is the area with the highest decoding accuracy for both response and reward.
 
 
 ---
-## Conclusion
+## (Tentative) conclusion
+Our results show there may be an association between reward and response in single trial history
+
+
