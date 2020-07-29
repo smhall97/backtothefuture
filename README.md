@@ -32,7 +32,7 @@ The methodology is further expanded within the code available at the following l
 - [Granger causality](https://github.com/SMHall94/backtothefuture/blob/master/pairwise_granger_causality.py) to compare reward[t] to response[t+1] where 't' corresponds to a relative trial 
 
 ---
-## Results and discussion
+## Results
 #### Top ten areas for decoding reward and response respectively (ranked by percentage accuracy)
 _Reward:_ 'MEA' (cortical subplate), 'CA' (hippocampus), 'PT' (thalamus), 'MOp' (motor cortex), 'PAG' (midbrain), 'RT' (thalamus), 'COA' (motor cortex), 'BMA' (cortical subplate), 'CA2' (hippocampus), 'LSr' (basal ganglia)
 
