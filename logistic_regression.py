@@ -1,4 +1,5 @@
 """
+Code written by Holly Wilson
 Logistic regression implemented using the [scikitlearn framework](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 Aim: decode reward information (feedback) and responese (prediction) information within the neural signals
 """
@@ -23,11 +24,8 @@ sns.set()
 
 def get_accuracy(targetneurons,windowVals,label):
 
-    trail_count=[]
+    trial_count=[]
 
-
-    #targetneurons = ['VISp','MEA','CA','PT','MOp','PAG']
-    #'MEA' (cortical subplate), 'CA' (hippocampus), 'PT' (thalamus), 'MOp' (motor cortex), 'PAG' (midbrain)
     windowPre = windowVals[0] * 100
     windowPost = windowVals[1] * 100
     windowSize = windowPre + windowPost
@@ -38,7 +36,7 @@ def get_accuracy(targetneurons,windowVals,label):
       timeMeasure = 'response_time'
     endLimit = 2.5 - ((windowPost/100)+0.5)
 
-    # accuracyList = np.zeros(len(targetneurons))
+
     accuracyList = [] # Accumulates accuracies for all brain areas
     # Loop over target neurons
     for neuron in targetneurons:
@@ -56,11 +54,7 @@ def get_accuracy(targetneurons,windowVals,label):
             # Get rewarded trials for target neurons
             targetSpikes = dat['spks'][targetInds, :, :]
 
-            # Remove nogo trials
-            #nogoInds = dat['response'] != 0
-            #nogoInds = nogoInds[rewardInds] # Limit to current trials
-            #rewardSpikes = rewardSpikes[:, nogoInds, :]
-
+    
             # Limit by response time: need suitable buffer at end
             if label == 'feedback_type': 
               usableInds = dat[timeMeasure] < endLimit# 1.90
@@ -72,7 +66,7 @@ def get_accuracy(targetneurons,windowVals,label):
 
             targetSpikes = targetSpikes[:, usableInds, :]
             indextimes = dat[timeMeasure][usableInds] # HW: changed from timemeasure to label, and feedbacktimes to generic indextimes
-            trail_count.append(np.shape(targetSpikes)[1])
+            trial_count.append(np.shape(targetSpikes)[1])
 
             labels = dat[label][usableInds] # Labels for usable trials
 
@@ -84,18 +78,18 @@ def get_accuracy(targetneurons,windowVals,label):
                 indices = np.arange(windowInds[i]-windowPre, windowInds[i]+windowPost).astype('int')
                 struct = targetSpikes[:, i, indices]
 
-                try: # Some indices not working?
+                try: # To account for indices where the indices aren't working (missing recordings in a particualr mouse)
                     indexWindows[:, i, :] = struct
                 except:
                     indexWindows[:, i, :] = struct[:, :-1]
-                    #print('Issue with indices')
+)
 
             # Reshape structures
                 # [neurons x trials x time] -> [trials x time]
             currentStack = reshapeToTrials(indexWindows)
             labelvec = np.tile(labels, targetSpikes.shape[0])
 
-            # print("Structure: {0}; labels: {1}".format(currentStack.shape[0], len(labelvec))) # Confirm data preparation works
+
 
             areaStack = np.concatenate((areaStack,currentStack), axis=0)
             labelStack = np.concatenate((labelStack, labelvec), axis=0)
@@ -111,14 +105,10 @@ def get_accuracy(targetneurons,windowVals,label):
         #average accuracy
         accuracies_for_respective_area = np.mean(cross_val_score(log_reg,areaStack, labelStack, cv=5, scoring = 'accuracy'))
 
-
-        # Add to accuracy list - # TODO create dict with brain labels (possibly)
+        # Add to accuracy list 
         accuracyList.append(accuracies_for_respective_area)
     
     # Return negative accuracy
     accuracy = accuracyList[-1]
 
-    #print(np.sum(trail_count))
     return accuracy
-
-#get_accuracy([0.1,1.5],label = 'response')
