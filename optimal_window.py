@@ -1,3 +1,5 @@
+# Code written by Saptarshi Ghosh
+
 import numpy as np
 
 from sklearn.linear_model import LogisticRegression
@@ -13,16 +15,7 @@ sns.set()
 Determine optimal window size for reward decoding
 """
 
-# for carrying out window coding for response
-
-#'VISrl' (visual) , 'MG' (thalamus), 'NB' (midbrain) , 'CA2', (hippocampus) 'SPF' (visual cortex? 
-      
-    
-import time
-
-t = time.time() 
-
-master_dict_res={'VISrl' : [], 'MG' : [],'NB' : [],'CA2' : [],'SPF' : []}
+example_master_dict_res={'VISrl' : [], 'MG' : [],'NB' : [],'CA2' : [],'SPF' : []}
 
 targetneurons = ['VISrl', 'MG','NB','CA2','SPF']
 for u in targetneurons:
@@ -36,16 +29,16 @@ for u in targetneurons:
         pre=j
         post=i
         windowVals=[pre/100,post/100]
-        #print(windowVals)
+    
         try:
             ff=get_accuracy(targetneurons,windowVals,label ='response')
             vals.append([windowVals,ff,j+1])
         except:
             vals.append([windowVals,0.0,j+1])
             print("Error!")
-        #print(windowVals,"  ",ff)
+      
         
-      master_dict_res[u].append(vals)
+      master_dictexample_master_dict_res_res[u].append(vals)
       print("Brain Area:",u," ",total_length/100,"sec")
 
 """
@@ -65,15 +58,13 @@ for u in targetneurons:
         pre=total_length-i
         post=i
         windowVals=[pre/100,post/100]
-        #print(windowVals)
         try:
             ff=get_accuracy(targetneurons,windowVals,label ='feedback_type')
             vals.append([windowVals,ff,total_length])
         except:
             vals.append([windowVals,0.0,total_length])
             print("Error!")
-        #print(windowVals,"  ",ff)
-        
+
       example_master_dict[u].append(vals)
       print("Brain Area:",u," ",total_length/100,"sec")
 
