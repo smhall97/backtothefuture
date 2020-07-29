@@ -39,6 +39,8 @@ _Reward:_ 'MEA' (cortical subplate), 'CA' (hippocampus), 'PT' (thalamus), 'MOp' 
 
 
 _Response:_ 'VISrl' (visual) , 'MG' (thalamus), 'NB' (midbrain) , 'CA2', (hippocampus) 'SPF' (thalamus), 'PIR' (motor cortex), 'CA' (hippocampus), 'EPd'(cortical subplate), 'POL'(thalamus), ' TT' (motor cortex)
+![brainresponsedecodable](https://user-images.githubusercontent.com/47060850/88845966-d2ed5180-d1dc-11ea-9cec-b02ac2c86e45.png)
+
 
 
 #### Best time windows for decoding reward and response within the respective brain areas
