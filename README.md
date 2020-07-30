@@ -53,6 +53,7 @@ _Response:_ -0.8 to 0 Sec (timelocked to the response at 0)
 #### Granger causality
 The following links directly to the the 'CA' brain areas within the hippocampus - chosen as it is the area with the highest decoding accuracy for both response and reward.
 
+To investigate whether the feedback-related activity "Granger-causes" the decision making activity on the next trial, we assess whether lagged values of the feedback window allow us to better predict future values of decision making activity than the previous value of decision making related activity alone.
 
 ---
 ## (Tentative) conclusion
