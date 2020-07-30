@@ -46,9 +46,9 @@ _Response:_ 'VISrl' (visual) , 'MG' (thalamus), 'NB' (midbrain) , 'CA2', (hippoc
 
 
 #### Best time windows for decoding reward and response within the respective brain areas
-_Reward:_ 0.0 to 1.1 Sec (timelocked to reward at time 0)
+_Reward:_ 0.0 to 1.1 seconds (timelocked to reward at time 0)
 
-_Response:_ -0.8 to 0 Sec (timelocked to the response at 0)
+_Response:_ -0.8 to 0 seconds (timelocked to the response at 0)
 
 #### Granger causality
 The following links directly to the the 'CA' brain areas within the hippocampus - chosen as it is the area with the highest decoding accuracy for both response and reward.
